@@ -1,0 +1,19 @@
+# macOS
+.DS_Store
+
+# VSCode
+.vscode/
+
+# Vim swap
+*.swp
+
+# Python
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# C++ build files
+program
+program.out
+*.o
