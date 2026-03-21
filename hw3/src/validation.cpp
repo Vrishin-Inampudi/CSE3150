@@ -1,0 +1,23 @@
+#include "validation.h"
+#include <cctype>
+
+bool is_valid_password(std::string password) {
+    if (password.length() < 8) {
+        return false;
+    }
+
+    bool has_upper = false;
+    bool has_special = false;
+
+    for (char ch : password) {
+        if (std::isupper(static_cast<unsigned char>(ch))) {
+            has_upper = true;
+        }
+
+        if (!std::isalnum(static_cast<unsigned char>(ch))) {
+            has_special = true;
+        }
+    }
+
+    return has_upper && has_special;
+}
